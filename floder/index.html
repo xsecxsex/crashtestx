@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crash Number</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    text-align:center;
+}
+
+#crash{
+    font-size:100px;
+    font-weight:bold;
+    color:#ff3b3b;
+    text-shadow:0 0 20px #ff3b3b;
+    margin-bottom:30px;
+}
+
+button{
+    padding:15px 40px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div id="crash">?</div>
+    <button onclick="generate()">جولة جديدة</button>
+</div>
+
+<script>
+
+function generate(){
+
+    let crash;
+
+    let r = Math.random();
+
+    if(r < 0.60){
+        crash = (1 + Math.random() * 4).toFixed(2);
+    }
+    else if(r < 0.90){
+        crash = (5 + Math.random() * 10).toFixed(2);
+    }
+    else{
+        crash = (15 + Math.random() * 15).toFixed(2);
+    }
+
+    document.getElementById("crash").innerHTML = crash + "x 💥";
+}
+
+generate();
+
+</script>
+
+</body>
+</html>
