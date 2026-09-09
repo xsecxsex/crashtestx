@@ -219,6 +219,14 @@ input, textarea, select, button {
   align-items: center;
   justify-content: center;
   padding: 8px;
+  border: 0;
+  clip-path: none;
+}
+
+.frame::before,
+.frame::after {
+  content: none !important;
+  display: none !important;
 }
 
 .rotating-wrap {
