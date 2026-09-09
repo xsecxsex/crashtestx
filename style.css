@@ -70,6 +70,7 @@ input, textarea, select, button {
   object-fit: cover;
   object-position: center;
   display: block;
+  background: #0a0003 url('assets/prediction-background.jpg') center / cover no-repeat;
 }
 
 /* Base red nebula gradient */
